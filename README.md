@@ -18,6 +18,10 @@ How to run:
 1) perl_loop_mafft_all
 
 - Input: Input files are the resulting files from bingene (see Li et al. 2013), i.e. multiple fasta files containing sequence information from a query sequence and further sequences of interest and a list containing the fasta file names as text document, which should be named fileID.
+- program call: perl perl_loop_mafft fileID outfolder outfolder2
+
+Run perl on perl script (perl_loop_mafft) it uses MAFFT to align the quaried inputfiles placed in a list (fileID), in this list each inputfile has been checked for sequence names appearing twice, if they do they have been renamed. Once Mafft has run the 2 files created are put in different output folders. The New renamed fasta files(.fas) in outputfolder2 and the aligned output files (fas.out) in outputfolder. 
+
 
 Bingene input:
 1st file:
@@ -50,4 +54,23 @@ perl perl_loop_mafft_all_com_scalar fileID outfolder1 outfolder2
 
 2) countseqs2.pl
 
-- Input: aligned fasta files from step 1)
+- Input: a text file containing a list of files which will be analysed. An outputfolder name, which will have the tables containing the satistics (called stats here). The files listed in the filelist should be in fasta format deposited in an inputfolder (called alignments here), which contains the aligned fasta files from 1). 
+- 
+- programm call: perl countseqs2.pl <filelist: contains list of file names> <outfolder: new folder containing stats for each gene, saved in separate files> <infolder: folder containing alignmnets in .fasta format> 
+- example filelist structure:
+    
+-Input fasta file format structure:
+>tm62
+--taccagctgctgaagacacaccagttgcctctggacgccttcctggtggcgctgaaga
+tgatgcagctggacgacgtggacattgacgaggtgcaatgcattctggccaatctcatct
+g-----
+>queryNew_8fish_Danio_rerio
+-gtatcatctcctgaggactcatcagcttcctctggctgcatttctggtgtcgctgcaga
+tgatgaaggtggaggacgtggacatcgacgaggtgcagtgcattctggccaacctcatct
+acatg-
+>Aal
+--taccagctcctgaagacccaccagctgcccctggatgcctttctggtttctctgaaga
+tgatgcaggtggaggaggtggacatcgatgaggtccagtgcatcctggccaacctcatct
+acatgg
+(...)
+
