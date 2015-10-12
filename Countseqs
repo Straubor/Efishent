@@ -1,5 +1,5 @@
 
-#Call Programm: perl countseqs2.pl <filelist: contains list of file names> <infolder: folder containing alignmnets in .fasta format> <outfolder: new folder containing stats for each gene, saved in separate files>
+#Call Programm: perl countseqs2.pl <filelist: contains list of file names> <outfolder: new folder containing stats for each gene, saved in separate files> <infolder: folder containing alignmnets in .fasta format> 
 
 
 #count seqeunce lengths in aln files
