@@ -57,8 +57,11 @@ perl perl_loop_mafft_all_com_scalar fileID outfolder1 outfolder2
 - Input: a text file containing a list of files which will be analysed. An outputfolder name, which will have the tables containing the satistics (called stats here). The files listed in the filelist should be in fasta format deposited in an inputfolder (called alignments here), which contains the aligned fasta files from 1). 
 - 
 - programm call: perl countseqs2.pl <filelist: contains list of file names> <outfolder: new folder containing stats for each gene, saved in separate files> <infolder: folder containing alignmnets in .fasta format> 
+
 - example filelist structure:
-    
+    new_Danio_rerio.1.48788.48665.fas.out
+    new_Danio_rerio.1.296705.296829.fas.out
+
 -Input fasta file format structure:
 >tm62
 --taccagctgctgaagacacaccagttgcctctggacgccttcctggtggcgctgaaga
