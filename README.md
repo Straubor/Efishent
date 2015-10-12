@@ -50,4 +50,4 @@ perl perl_loop_mafft_all_com_scalar fileID outfolder1 outfolder2
 
 2) countseqs2.pl
 
-- Input: 
+- Input: aligned fasta files from step 1)
