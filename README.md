@@ -17,7 +17,7 @@ How to run:
 
 1) perl_loop_mafft_all
 
-- Input: Input files are the resulting files from bingene (see Li et al. 2013), i.e. multiple fasta files containing sequence information from a query sequence and further sequences of interest and a list containing the fasta file names as text document, which should be named fileID.
+- Input: Input files are the resulting files from bingene (see Li et al. 2013), i.e. multiple fasta files containing sequence information from a query sequence and further sequences of interest and a list containing the fasta file names as text document, which should be named fileID (how to create the fileID list: open a Terminal window; cd into folder containing the bingene output files (genebin folder); type: ls > fileID.txt).
 - program call: perl perl_loop_mafft fileID outfolder outfolder2
 
 Run perl on perl script (perl_loop_mafft) it uses MAFFT to align the quaried inputfiles placed in a list (fileID), in this list each inputfile has been checked for sequence names appearing twice, if they do they have been renamed. Once Mafft has run the 2 files created are put in different output folders. The New renamed fasta files(.fas) in outputfolder2 and the aligned output files (fas.out) in outputfolder. 
