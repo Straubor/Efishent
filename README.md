@@ -7,7 +7,7 @@ Introduction:
 
 The software consists of two seprate PERL scripts:
 
-1) perl_loop_mafft_all
+1) perl_loop_mafft_all_scalar
 This script aligns the .fas output files from bingene using MAFFT (must be installed globally on your Linux machine; http://mafft.cbrc.jp/alignment/software/linux.html)
 
 2) countseqs2
@@ -15,14 +15,14 @@ This script will use the alignment files deposited in outfolder1 (ending in .fas
 
 How to run:
 
-1) perl_loop_mafft_all
+1) perl_loop_mafft_all_scalar
 - step1.1: create an empty folder
 - step1.2:copy input files and the perl script perl_loop_mafft_scalar from the efishent folder into this folder. Input files are the resulting files from bingene (see Li et al. 2013), i.e. multiple fasta files containing sequence information from a query sequence and further sequences of interest.
 - step1.3: create a list of input files called fileID: open a Terminal window; cd into folder containing the bingene output files (genebin folder); type: ls > fileID.txt.
 - step1.4: create two empty folders within the folder from step1 called "out1" and "out2"
 - step1.5: within the empty folder "out1" create two empty folders called "input" and "stats"
 - step1.5: call the program: perl perl_loop_mafft_scalar fileID out1 out2
--NOTE: Do not change the order of the programm call!
+-NOTE: Do not change the order of files in the programm call!
 
 Perl_loop_mafft_all_scalar uses MAFFT to align the quaried inputfiles placed in a list (fileID), in this list each inputfile has been checked for sequence names appearing twice, if they do they have been renamed. Once Mafft has run,  files created will be put in different output folders. The new renamed fasta files(.fas) in out2 and the aligned output files (fas.out) in out1. 
 
